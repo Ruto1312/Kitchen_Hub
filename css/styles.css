@@ -62,9 +62,10 @@ nav a:hover{color:var(--ink)}
 .perks li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
 .perks b{color:var(--ink);font-weight:600}
 .hero-visual{position:relative;justify-self:end;width:100%;max-width:500px}
-.hero-blob{position:absolute;inset:-6% -10% -8% 8%;border-radius:42% 58% 55% 45%/50% 42% 58% 50%;background:radial-gradient(circle at 30% 30%,#DCE9E2,#EAD9C6 75%);z-index:0}
+.hero-blob{inset:6% -6% -6% 6%;border-radius:50%;background:#E3EEE8}
 .hero-pic{position:relative;z-index:1;border-radius:200px 200px 28px 28px;overflow:hidden;aspect-ratio:1/1.08;background:var(--soft);box-shadow:0 30px 60px rgba(31,81,69,.18)}
 .hero-pic img{width:100%;height:100%;object-fit:cover;object-position:right center;display:block}
+.hero::before{display:none}
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:2rem}.hero{padding-top:2rem}.hero-visual{justify-self:center;max-width:420px}}
 
 /* ----- Sections ----- */

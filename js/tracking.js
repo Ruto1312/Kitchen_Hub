@@ -5,7 +5,7 @@
    ============================================================ */
 
 /* 1. Google Sheet: the Web app URL from Apps Script (ends in /exec) */
-var GOOGLE_SHEET_URL = "";
+var GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbz4PCRZnIs_CjzeQoB8_7kodzfsJ3LaCwrbwlrSQLnwVcPDstMcQTB3IrADRXQKNnru/exec";
 
 /* 2. Google Analytics 4: your Measurement ID, looks like "G-XXXXXXXXXX" */
 var GA_MEASUREMENT_ID = "";

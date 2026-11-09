@@ -14,7 +14,7 @@ Nothing personal is recorded. No names, phone numbers or addresses are sent. Eac
 
 ## Part 1: Google Sheet (recommended)
 
-1. Go to **sheets.google.com** and create a blank spreadsheet. Name it "Kitchen Haven tracking".
+1. Go to **sheets.google.com** and create a blank spreadsheet. Name it "Kitchen Hub tracking".
 2. Click **Extensions > Apps Script**.
 3. Delete the code already there. Open `tracking/google-apps-script.gs` from this folder, copy all of it, and paste it in. Click **Save** (the disk icon).
 4. In the menu at the top that says `doPost`, choose **setup**, then click **Run**.
@@ -39,10 +39,31 @@ Nothing personal is recorded. No names, phone numbers or addresses are sent. Eac
 
 ---
 
+## Already set up the sheet before? Update it for the waitlist
+
+1. Open your sheet > **Extensions > Apps Script**.
+2. Select all the old code, delete it, and paste the new `tracking/google-apps-script.gs`. Click **Save**.
+3. Choose **setup** in the menu at the top and click **Run**. This adds the **Sign-ups** tab and the new Summary rows. Your existing Events rows are kept.
+4. Click **Deploy > Manage deployments**, click the pencil icon, set **Version** to **New version**, then click **Deploy**. Your URL stays the same, so `js/tracking.js` doesn't change.
+
+The **Sign-ups** tab gets one row each time someone joins the waitlist or reserves an order: name, phone, city, what they want next or what they reserved. It only fills in when the person ticks the consent box.
+
+---
+
+## Exchange rate (MMK prices)
+
+Prices on the website are stored in US dollars and shown in MMK by default. The rate comes from the **Settings** tab, cell **B2** (starts at 4500).
+
+To turn it on, update the Apps Script code (same 4 steps as above: paste the new code, run **setup**, then **Manage deployments > New version > Deploy**). After that, change **B2** whenever the rate changes, and the website uses it the next time a page is opened. If the sheet can't be reached, the website uses the rate in `js/products.js` (`EXCHANGE_RATE`).
+
+Later, with a real database, the rate can be stored there (or updated daily from a currency service) and the website reads it the same way.
+
+---
+
 ## Part 2: Google Analytics 4 (optional)
 
 1. Go to **analytics.google.com** and click **Start measuring**.
-2. Create an account and a property (name: Kitchen Haven, time zone: yours, currency: USD).
+2. Create an account and a property (name: Kitchen Hub, time zone: yours, currency: USD).
 3. Choose **Web** as the platform. Enter your GitHub Pages address (for example `yourname.github.io/kitchen-haven`).
 4. Copy the **Measurement ID**. It looks like `G-AB12CD34EF`.
 5. Paste it into `js/tracking.js`:
@@ -68,5 +89,6 @@ Google Analytics only works on the published site (GitHub Pages), not when you o
 | `view_brands` | Someone clicks a category to compare brands |
 | `view_details` | Someone opens a product's details window |
 | `add_to_cart` | Someone clicks Add / Add to cart |
-| `order_placed` | Someone finishes the demo checkout (products and total only) |
+| `order_placed` | Someone reserves an order (products and total only; their name and phone go to the Sign-ups tab) |
+| `feedback` | Someone answers the quick poll |
 | `switch_language` | Someone switches between English and Burmese |

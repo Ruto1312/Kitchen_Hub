@@ -1,4 +1,4 @@
-# Kitchen Haven Appliances
+# Kitchen Hub Appliances
 
 School-project demo store for kitchen appliances. Plain HTML, CSS and JavaScript, with no build step.
 
@@ -10,6 +10,7 @@ css/styles.css      all colours, layout and design
 js/products.js      PRODUCT DATA: names, prices, specs, brands, currency
 js/i18n.js          ALL TEXT in English and Burmese (မြန်မာ), incl. Burmese product names
 js/app.js           logic: categories, round brand picker, search, cart, checkout
+js/signup.js        WAITLIST, reservation, quick poll, problem/solution cards
 js/tracking.js      VISITOR TRACKING settings (Google Sheet URL, Google Analytics ID)
 tracking/           Google Sheet script + step-by-step SETUP.md
 images/             product photos and hero.jpg (the top banner)

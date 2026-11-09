@@ -4,8 +4,11 @@
    - Photos live in the images/ folder (images/<product-id>.jpg)
    - Final price = base price x brand multiplier (brandPrices)
    ============================================================ */
-/* CURRENCY: change the symbol here */
-var CURRENCY = "$";
+/* CURRENCY: prices in this file are in US dollars.
+   Shoppers can switch between MMK and USD. MMK = USD x EXCHANGE_RATE, rounded to 100 Ks.
+   If your Google Sheet has a "Settings" tab, the rate written there is used instead,
+   so you can change it without editing this file (see tracking/SETUP.md). */
+var EXCHANGE_RATE = 4500;
 var SAMPLE = "Sample details for demonstration. Replace with the real product's specifications.";
 var mainProducts = [
   {id:"air-fryer",       name:"Air fryer",       img:"images/air-fryer.jpg",       desc:"Crispy food with little oil", price:89,

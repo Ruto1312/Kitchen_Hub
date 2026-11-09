@@ -14,11 +14,24 @@
 <header>
   <div class="wrap bar">
     <a class="logo" href="#top"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 11h16v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6Z M2 11h20 M9 7c0-1.5 1-2 1-3.5 M14 7c0-1.5 1-2 1-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>KitchenHub</a>
-    <nav><a href="#products" data-i="nav.shop">Shop</a><a href="#why" data-i="nav.why">Why us</a><a href="#brands" data-i="nav.brands">Brands</a><a href="#faq" data-i="nav.faq">FAQ</a><a href="#join" class="navjoin" data-i="nav.join">Join waitlist</a></nav>
-    <div class="lang" role="group" aria-label="Language / ဘာသာစကား">
-      <button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="my" aria-pressed="false" lang="my">မြန်မာ</button>
+    <nav id="mainnav"><a href="#why" data-i="nav.why">Why us</a><a href="#products" data-i="nav.shop">Shop</a><a href="#brands" data-i="nav.brands">Brands</a><a href="#faq" data-i="nav.faq">FAQ</a><a href="#join" class="navjoin" data-i="nav.join">Join waitlist</a></nav>
+    <div class="toggles">
+      <div class="lang" role="group" aria-label="Language / ဘာသာစကား">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="my" aria-pressed="false" lang="my">မြန်မာ</button>
+      </div>
+      <div class="lang cur" role="group" aria-label="Currency / ငွေကြေး">
+        <button type="button" data-cur="MMK" aria-pressed="true">MMK</button><button type="button" data-cur="USD" aria-pressed="false">USD</button>
+      </div>
     </div>
     <button class="cartbtn" id="openCart" data-i-aria="cart.open"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg><span class="cartlabel" data-i="cart">Cart</span><span id="count">0</span></button>
+    <button class="menubtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" data-i-aria="nav.menu"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="mm-links"><a href="#why" data-i="nav.why"></a><a href="#benefits" data-i="nav.benefits"></a><a href="#products" data-i="nav.shop"></a><a href="#brands" data-i="nav.brands"></a><a href="#faq" data-i="nav.faq"></a><a href="#join" class="navjoin" data-i="nav.join"></a></nav>
+    <div class="mm-toggles">
+      <div class="lang" role="group" aria-label="Language / ဘာသာစကား"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="my" aria-pressed="false" lang="my">မြန်မာ</button></div>
+      <div class="lang cur" role="group" aria-label="Currency / ငွေကြေး"><button type="button" data-cur="MMK" aria-pressed="true">MMK</button><button type="button" data-cur="USD" aria-pressed="false">USD</button></div>
+    </div>
   </div>
 </header>
 
@@ -58,10 +71,50 @@
 
 
 
+  <section id="why" class="why">
+    <div class="wrap">
+      <div class="why-head"><p class="eyebrow" data-i="why.eyebrow"></p><h2 data-i="why.title"></h2></div>
+      <div class="compare">
+        <div class="cmp-col cmp-before">
+          <h3 data-i="prob.title"></h3>
+          <ul>
+            <li><span class="mark-x" aria-hidden="true">✕</span><span data-i="prob.1"></span></li>
+            <li><span class="mark-x" aria-hidden="true">✕</span><span data-i="prob.2"></span></li>
+            <li><span class="mark-x" aria-hidden="true">✕</span><span data-i="prob.3"></span></li>
+            <li><span class="mark-x" aria-hidden="true">✕</span><span data-i="prob.4"></span></li>
+          </ul>
+        </div>
+        <div class="cmp-arrow" aria-hidden="true">→</div>
+        <div class="cmp-col cmp-after">
+          <h3 data-i="sol.title"></h3>
+          <ul>
+            <li><span class="mark-v" aria-hidden="true">✓</span><span data-i="sol.1"></span></li>
+            <li><span class="mark-v" aria-hidden="true">✓</span><span data-i="sol.2"></span></li>
+            <li><span class="mark-v" aria-hidden="true">✓</span><span data-i="sol.3"></span></li>
+            <li><span class="mark-v" aria-hidden="true">✓</span><span data-i="sol.4"></span></li>
+          </ul>
+        </div>
+      </div>
+      <figure class="why-quote"><blockquote data-i="why.quote"></blockquote><figcaption data-i="why.quote.by"></figcaption></figure>
+    </div>
+  </section>
+
+  <section id="benefits" class="benefits-sec">
+    <div class="wrap">
+      <div class="why-head"><p class="eyebrow" data-i="ben.eyebrow"></p><h2 data-i="ben.title"></h2></div>
+      <div class="benefits">
+        <div class="benefit"><span class="bicon"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><div><h3 data-i="ben.1.t"></h3><p data-i="ben.1.d"></p></div></div>
+        <div class="benefit"><span class="bicon"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12l-8 8-9-9V3h8l9 9z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span><div><h3 data-i="ben.2.t"></h3><p data-i="ben.2.d"></p></div></div>
+        <div class="benefit"><span class="bicon"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2V3z"/><path d="M9 8h6M9 12h6"/></svg></span><div><h3 data-i="ben.3.t"></h3><p data-i="ben.3.d"></p></div></div>
+        <div class="benefit"><span class="bicon"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span><div><h3 data-i="ben.4.t"></h3><p data-i="ben.4.d"></p></div></div>
+      </div>
+    </div>
+  </section>
+
   <section id="products">
     <div class="wrap">
       <div class="shop-head">
-        <div><p class="eyebrow" data-i="shop.eyebrow"></p><h2 data-i="shop.title"></h2></div>
+        <div><p class="eyebrow" data-i="shop.eyebrow"></p><h2 data-i="shop.title"></h2><p class="rate-note" id="rate-note"></p></div>
         <label class="search"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input id="q" type="search" data-i-ph="search.ph" data-i-aria="search.ph"></label>
       </div>
       <div class="chips" id="chips" data-i-aria="chips.aria"></div>
@@ -71,13 +124,6 @@
   </section>
 
 
-  <section id="why" class="why">
-    <div class="wrap">
-      <div class="why-head"><p class="eyebrow" data-i="why.eyebrow"></p><h2 data-i="why.title"></h2></div>
-      <div class="benefits" id="benefits"></div>
-      <figure class="why-quote"><blockquote data-i="why.quote"></blockquote><figcaption data-i="why.quote.by"></figcaption></figure>
-    </div>
-  </section>
 
   <section class="poll-wrap" aria-labelledby="poll-title">
     <div class="wrap">
@@ -155,7 +201,7 @@
 <footer>
   <div class="wrap foot">
     <div><a class="logo light" href="#top"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 11h16v6a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-6Z M2 11h20 M9 7c0-1.5 1-2 1-3.5 M14 7c0-1.5 1-2 1-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>KitchenHub</a><p data-i="footer.tag"></p></div>
-    <nav class="fnav"><a href="#products" data-i="nav.shop"></a><a href="#why" data-i="nav.why"></a><a href="#brands" data-i="nav.brands"></a><a href="#faq" data-i="nav.faq"></a><a href="#join" data-i="nav.join"></a></nav>
+    <nav class="fnav"><a href="#why" data-i="nav.why"></a><a href="#products" data-i="nav.shop"></a><a href="#brands" data-i="nav.brands"></a><a href="#faq" data-i="nav.faq"></a><a href="#join" data-i="nav.join"></a></nav>
   </div>
   <div class="wrap copy"><span data-i="footer.copy"></span><span class="privacy" data-i="footer.privacy"></span></div>
 </footer>

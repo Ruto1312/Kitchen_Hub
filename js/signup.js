@@ -1,11 +1,10 @@
 /* ============================================================
-   WAITLIST, RESERVATIONS, QUICK POLL and "Why shop with us" benefits
+   WAITLIST, RESERVATIONS, QUICK POLL
    Sign-ups go to the same Google Sheet as tracking (GOOGLE_SHEET_URL
    in tracking.js), into the "Sign-ups" tab.
    ============================================================ */
 var CITIES = ["Yangon", "Mandalay", "Naypyidaw", "Other"];
 var POLL_OPTIONS = ["genuine", "price", "compare", "delivery", "receipt"];
-var BENEFIT_ICONS = ["🛡️", "💰", "🧾", "🚚"];
 
 function el(id){ return document.getElementById(id); }
 
@@ -54,12 +53,6 @@ function fillSelects(){
     s.value = v;
   });
 }
-function renderBenefits(){
-  el("benefits").innerHTML = BENEFIT_ICONS.map(function(icon, i){
-    return '<div class="benefit"><span class="bicon" aria-hidden="true">' + icon + '</span>' +
-      '<div><h3>' + t("ben." + (i + 1) + ".t") + '</h3><p>' + t("ben." + (i + 1) + ".d") + '</p></div></div>';
-  }).join("");
-}
 function pollAnswer(){ try { return localStorage.getItem("kh_poll"); } catch (e) { return null; } }
 function renderPoll(){
   var picked = pollAnswer();
@@ -68,7 +61,7 @@ function renderPoll(){
   }).join("");
   el("poll-thanks").hidden = !picked;
 }
-function renderDeck(){ fillSelects(); renderBenefits(); renderPoll(); }
+function renderDeck(){ fillSelects(); renderPoll(); }
 
 /* ----- Quick poll ----- */
 el("poll-opts").addEventListener("click", function(e){

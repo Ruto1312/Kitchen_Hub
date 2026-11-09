@@ -25,7 +25,13 @@ baseProducts.forEach(function(base){
   });
 });
 var all = products;
-function money(n){return CURRENCY+n.toFixed(2)}
+/* Currency: MMK (default) or USD. Prices are stored in USD. */
+var CUR="MMK";
+try{ if(localStorage.getItem("kh_cur")==="USD") CUR="USD"; }catch(e){}
+function money(n){
+  if(CUR==="USD") return "$"+n.toFixed(2);
+  return (Math.round(n*EXCHANGE_RATE/100)*100).toLocaleString("en-US")+" "+t("cur.ks");
+}
 function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function $(id){return document.getElementById(id)}
 function find(id){return all.filter(function(p){return p.id===id})[0]}
@@ -207,6 +213,8 @@ document.addEventListener("keydown",function(e){
 function renderAll(){
   applyStaticText();
   $("hero-stat").innerHTML=t("hero.stat",{c:num(baseProducts.length),b:num(Object.keys(brandPrices).length)});
+  [].forEach.call(document.querySelectorAll("[data-cur]"),function(b){b.setAttribute("aria-pressed",b.getAttribute("data-cur")===CUR?"true":"false")});
+  $("rate-note").textContent=t("rate.note",{rate:num(EXCHANGE_RATE.toLocaleString("en-US"))});
   renderChips();
   var reopen=renderProducts();
   if(reopen){var c=$("category-grid").querySelector('[data-category="'+reopen+'"]'); if(c) openPanel(c,true);}
@@ -214,7 +222,9 @@ function renderAll(){
   renderDeck();
   if(modalId) openModal(modalId);
 }
-document.querySelector(".lang").addEventListener("click",function(e){
+document.addEventListener("click",function(e){
+  var c=e.target.closest("[data-cur]");
+  if(c){ if(c.getAttribute("data-cur")!==CUR){ CUR=c.getAttribute("data-cur"); try{localStorage.setItem("kh_cur",CUR)}catch(err){} track("switch_currency",{product:CUR}); renderAll(); } return; }
   var b=e.target.closest("[data-lang]"); if(!b||b.getAttribute("data-lang")===LANG) return;
   LANG=b.getAttribute("data-lang");
   try{localStorage.setItem("kitchenHavenLang",LANG)}catch(err){}
@@ -224,6 +234,25 @@ document.querySelector(".lang").addEventListener("click",function(e){
 
 renderAll();
 track("page_view");
+
+/* Live exchange rate: read from the "Settings" tab of the Google Sheet, if set up.
+   Falls back to EXCHANGE_RATE in products.js when the sheet can't be reached. */
+if(typeof GOOGLE_SHEET_URL!=="undefined" && GOOGLE_SHEET_URL){
+  fetch(GOOGLE_SHEET_URL+(GOOGLE_SHEET_URL.indexOf("?")<0?"?":"&")+"action=rate")
+    .then(function(r){return r.json()})
+    .then(function(d){var r=Number(d&&d.rate); if(r>=500&&r<=50000&&r!==EXCHANGE_RATE){EXCHANGE_RATE=r; renderAll();}})
+    .catch(function(){});
+}
+
+/* ----- Phone menu ----- */
+function setMenu(open){
+  $("mobileMenu").hidden=!open; $("menuBtn").setAttribute("aria-expanded",open?"true":"false");
+}
+$("menuBtn").addEventListener("click",function(e){e.stopPropagation();setMenu($("mobileMenu").hidden);});
+$("mobileMenu").addEventListener("click",function(e){if(e.target.closest("a"))setMenu(false);});
+document.addEventListener("click",function(e){if(!$("mobileMenu").hidden&&!e.target.closest("#mobileMenu,#menuBtn"))setMenu(false);});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!$("mobileMenu").hidden){setMenu(false);$("menuBtn").focus();}});
+window.addEventListener("resize",function(){if(window.innerWidth>1080)setMenu(false);});
 
 /* helper: send one product event to the Sheet and Google Analytics */
 function trackProduct(event,p){

@@ -293,3 +293,91 @@ body.lang-my .step p,body.lang-my .bspec{line-height:1.7}
 /* Removed decorative shape behind the hero photo and the faint corner glow */
 .hero-blob{display:none}
 .hero::before{display:none}
+
+/* ===== Pitch-deck sections: problem → solution, poll, mission, waitlist ===== */
+nav a.navjoin{color:var(--brand);font-weight:700}
+nav a.navjoin:hover{color:var(--brand-dark)}
+
+.why{padding-top:3rem}
+.pairs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:.5rem}
+@media(max-width:980px){.pairs{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.pairs{grid-template-columns:1fr}}
+.pair{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.pp{position:relative;padding:1.25rem 1.3rem 1.1rem;flex:1}
+.pnum{position:absolute;top:1rem;right:1.2rem;font-family:"Fraunces",Georgia,serif;font-size:1.6rem;color:var(--line);font-weight:600;line-height:1}
+.plabel{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#B3261E;margin-bottom:.35rem}
+.plabel.fix{color:var(--brand)}
+.pair h3{margin:0 0 .3rem;font-family:inherit;font-weight:700;font-size:1.02rem;letter-spacing:0;line-height:1.35}
+.pair p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.55}
+.pair blockquote{margin:.75rem 0 0;padding:.1rem 0 .1rem .8rem;border-left:3px solid var(--accent);font-family:"Fraunces","Noto Sans Myanmar",Georgia,serif;font-style:italic;font-size:.95rem;color:var(--ink);line-height:1.5}
+.ps{display:flex;gap:.8rem;align-items:flex-start;background:#EAF2EE;border-top:1px dashed #C9DCD2;padding:1rem 1.3rem 1.15rem}
+.picon{flex:none;display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--card);font-size:1.15rem;box-shadow:0 2px 6px rgba(31,81,69,.12)}
+.ps p{color:#3F5650}
+.source{text-align:center;color:var(--muted);font-size:.82rem;margin:1.3rem 0 0}
+
+.poll-wrap{padding:0 0 3rem}
+.poll{display:flex;align-items:center;gap:1.5rem 2rem;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:22px;padding:1.6rem 1.8rem;box-shadow:0 18px 40px rgba(30,42,39,.18)}
+.poll-text{flex:1 1 260px}
+.poll .eyebrow{color:#F3B998}
+.poll h3{margin:0;font-size:1.3rem;color:#fff}
+.poll-opts{flex:2 1 420px;display:flex;flex-wrap:wrap;gap:.5rem}
+.popt{border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-weight:600;font-size:.9rem;padding:.55rem 1rem;border-radius:999px;cursor:pointer;transition:all .15s;white-space:nowrap}
+.popt:hover:not(:disabled){background:#fff;color:var(--ink)}
+.popt:disabled{cursor:default;opacity:.45}
+.popt.picked{background:var(--accent);border-color:var(--accent);opacity:1}
+.poll-thanks{flex-basis:100%;margin:0;color:#BFE3D2;font-weight:600;font-size:.92rem}
+
+.mission{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;max-width:980px}
+@media(max-width:760px){.mission{grid-template-columns:1fr}}
+.mcard{border-radius:22px;padding:2rem 2rem 2.2rem}
+.mcard.light{background:var(--card);border:1px solid var(--line)}
+.mcard.dark{background:linear-gradient(135deg,var(--brand),#2B6A5B);color:#fff}
+.mcard.dark .eyebrow{color:#F3B998}
+.mbig{margin:0;font-family:"Fraunces","Noto Sans Myanmar",Georgia,serif;font-size:1.3rem;line-height:1.45}
+body.lang-my .mbig{font-size:1.08rem;line-height:1.85}
+
+.join{background:var(--card);border-top:1px solid var(--line)}
+.join-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:3rem;align-items:center;max-width:1040px}
+@media(max-width:860px){.join-grid{grid-template-columns:1fr;gap:1.8rem}}
+.join h2{text-align:left;margin-bottom:.6rem}
+.join .lead{margin-bottom:1.2rem}
+.join-points{list-style:none;padding:0;margin:0;display:grid;gap:.55rem}
+.join-points li{display:flex;gap:.6rem;align-items:center;font-weight:500}
+.join-points li::before{content:"✓";display:grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:#E1EEE7;color:var(--brand);font-size:.8rem;font-weight:700}
+.join-form{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:1.6rem;box-shadow:var(--shadow)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+select{font:inherit;padding:.75rem .9rem;border:1.5px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);width:100%}
+select:focus{outline:0;border-color:var(--brand)}
+.join-form input{background:var(--card)}
+label.consent{display:flex;align-items:flex-start;gap:.6rem;font-weight:500;font-size:.88rem;color:var(--muted);cursor:pointer}
+label.consent input{width:18px;height:18px;margin:.15rem 0 0;flex:none;accent-color:var(--brand)}
+.invalid{border-color:#B3261E!important}
+label.consent.invalid{color:#B3261E}
+.form-err{margin:0;color:#B3261E;font-size:.88rem;font-weight:600}
+.join-ok{display:flex;gap:1rem;align-items:center}
+.join-ok[hidden]{display:none}
+.join-ok .done-check{margin:0;flex:none}
+.join-ok p{margin:.2rem 0 0;color:var(--muted)}
+.co-intro{margin:0 0 .3rem;padding:.8rem 1rem;border-radius:12px;background:#FBF1EA;color:#7A3E22;font-size:.88rem;line-height:1.5}
+#co{display:grid;gap:.8rem;align-content:start}
+[hidden]{display:none!important}
+body.lang-my .pair blockquote{font-style:normal;font-family:"Noto Sans Myanmar",sans-serif;font-size:.9rem;line-height:1.75}
+.two{align-items:end}
+
+/* ----- "Why shop with us": simple benefit row (replaces problem/solution cards) ----- */
+.why{padding:1rem 0 3rem}
+.why-head{text-align:center;margin-bottom:1.5rem}
+.why-head h2{margin:0}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media(max-width:900px){.benefits{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.benefits{grid-template-columns:1fr;gap:.6rem}}
+.benefit{display:flex;gap:.85rem;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.15rem}
+.bicon{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#EAF2EE;font-size:1.2rem}
+.benefit h3{margin:.1rem 0 .2rem;font-family:inherit;font-weight:700;font-size:.98rem;letter-spacing:0;line-height:1.35}
+.benefit p{margin:0;color:var(--muted);font-size:.87rem;line-height:1.5}
+body.lang-my .benefit p{line-height:1.75}
+.why-quote{margin:1.6rem auto 0;max-width:640px;text-align:center}
+.why-quote blockquote{margin:0;font-family:"Fraunces","Noto Sans Myanmar",Georgia,serif;font-style:italic;font-size:1.25rem;color:var(--ink)}
+.why-quote figcaption{margin-top:.35rem;color:var(--muted);font-size:.88rem}
+body.lang-my .why-quote blockquote{font-style:normal;font-family:"Noto Sans Myanmar",sans-serif;font-size:1.05rem;font-weight:600}

@@ -419,3 +419,7 @@ body.lang-my .cmp-col li{line-height:1.8}
 .benefits-sec{padding:0 0 3rem}
 .benefits-sec .bicon{color:var(--brand);background:#EAF2EE}
 .benefits-sec .bicon svg{display:block}
+
+/* Mission / vision text contrast */
+.about .mcard.light .mbig{color:var(--ink)}
+.about .mcard.dark .mbig{color:#FAF7F2}

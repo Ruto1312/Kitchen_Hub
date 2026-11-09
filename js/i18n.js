@@ -111,6 +111,113 @@ var TEXT = {
   }
 };
 
+/* ============================================================
+   PITCH-DECK CONTENT (problem, solution, waitlist, reservation)
+   These lines add to / replace the text above.
+   ============================================================ */
+Object.assign(TEXT.en, {
+  "why.quote.by":"We kept hearing this from shoppers in Myanmar, so we built KitchenHub to fix it.",
+  "why.quote":"“There are a lot of scams online these days.”",
+  "ben.4.d":"See what’s in stock, then follow your order to your door.",
+  "ben.4.t":"Track your delivery",
+  "ben.3.d":"Proof of purchase for every order.",
+  "ben.3.t":"Digital receipt",
+  "ben.2.d":"Importers sell directly, so you don’t pay extra to feel safe.",
+  "ben.2.t":"Fair prices",
+  "ben.1.d":"Every item comes from a verified importer.",
+  "ben.1.t":"Genuine products",
+  "nav.why":"Why us","nav.join":"Join waitlist",
+  "hero.eyebrow":"Online kitchen appliance store · Myanmar",
+  "hero.title":"Genuine appliances.<br><em>Fair prices.</em>",
+  "hero.lead":"Compare verified importers side by side, inspect your appliance at delivery and pay the rest in cash. No scams, no supermarket premium.",
+  "hero.join":"Join the waitlist",
+  "perk.1":"<b>Verified</b> importers","perk.2":"<b>Inspect</b> before you pay","perk.3":"<b>Digital</b> receipt",
+  "how.title":"How KitchenHub works",
+  "how.1.t":"Compare and choose","how.1.d":"Brands, prices and specs side by side.",
+  "how.2.t":"Reserve with a small deposit","how.2.d":"A small delivery deposit stops fake orders.",
+  "how.3.t":"Inspect, then pay","how.3.d":"Check it at your door, then pay the rest in cash.",
+  "why.eyebrow":"Why shop with us","why.title":"Shop with confidence",
+  "why.sub":"What customers told us, and how KitchenHub fixes it.",
+  "why.source":"From 5 customer interviews with urban households in Myanmar, 2026.",
+  "poll.eyebrow":"Quick question","poll.q":"What matters most to you when buying a kitchen appliance?",
+  "opt.genuine":"Genuine product","opt.price":"Fair price","opt.compare":"Easy to compare","opt.delivery":"Fast delivery","opt.receipt":"Receipt & warranty",
+  "poll.thanks":"Thank you! Your answer helps us build KitchenHub.",
+  "mission.eyebrow":"Our mission","mission.text":"To make quality kitchen appliances accessible to every home in Myanmar through a simple, trusted, and fully digital platform.",
+  "vision.eyebrow":"Our vision","vision.text":"To become Myanmar’s most trusted digital platform for kitchen appliances, starting with households, then growing through business partnerships.",
+  "brands.sub":"Popular kitchen brands in Vietnam and Myanmar, from our market research.",
+  "faq.1.a":"Usually 2–5 working days in Yangon. We’ll add more cities after launch.",
+  "faq.2.a":"Most appliances include a 1-year warranty, and every order comes with a digital receipt.",
+  "faq.4.q":"How do I pay?","faq.4.a":"Pay a small delivery deposit to confirm your order. Inspect the appliance when it arrives, then pay the rest in cash or by bank transfer.",
+  "faq.5.q":"Is KitchenHub open now?","faq.5.a":"Not yet. KitchenHub is an online store and we’re getting ready to launch, delivering in Yangon first. Join the waitlist or reserve an order and we’ll message you as soon as you can order.",
+  "join.eyebrow":"Join the waitlist","join.title":"Be the first to order",
+  "join.lead":"KitchenHub is an online store, launching soon. We’ll deliver in Yangon first, then more cities. Leave your details and we’ll message you as soon as you can order.",
+  "join.p1":"Be first to know when ordering opens","join.p2":"No payment needed now","join.p3":"We only message you about the launch",
+  "f.name":"Your name","f.phone":"Phone, Viber or Telegram","f.phone.ph":"09 xxx xxx xxx","f.city":"Delivery city","f.want":"Appliance you need next (optional)",
+  "city.choose":"Where should we deliver?","city.Yangon":"Yangon","city.Mandalay":"Mandalay","city.Naypyidaw":"Naypyidaw","city.Other":"Other","want.none":"Not sure yet",
+  "f.consent":"I agree that KitchenHub may message me when ordering opens.",
+  "f.err":"Please fill in your name, phone and city, and tick the box.",
+  "join.btn":"Join the waitlist","join.ok.t":"You’re on the list!","join.ok.d":"Thank you. We’ll message you as soon as you can order online with delivery to your city.",
+  "d.checkout":"Reserve order",
+  "co.intro":"We’re not taking payments yet. Reserve this order and we’ll call you to confirm as soon as online ordering opens.",
+  "co.place":"Reserve order",
+  "co.note":"No payment now. At launch: a small deposit, inspect at delivery, pay the rest in cash.",
+  "done.title":"Reservation received","done.text":"Thank you! We’ll call you to confirm. Your reference number is",
+  "footer.tag":"Smart appliances. Fair price. Simple delivery. Every home.",
+  "footer.copy":"© 2026 KitchenHub Myanmar",
+  "footer.privacy":"We count visits and cart clicks anonymously. We only save your name and phone if you join the waitlist or reserve an order, and only use them to contact you about the launch."
+});
+Object.assign(TEXT.my, {
+  "why.quote.by":"မြန်မာ ဝယ်ယူသူများထံမှ ဤစကားကို အကြိမ်ကြိမ် ကြားခဲ့ရသဖြင့် KitchenHub ကို တည်ဆောက်ခဲ့ပါသည်။",
+  "why.quote":"“အခုတလော အွန်လိုင်းမှာ လိမ်တာတွေ အရမ်းများတယ်။”",
+  "ben.4.d":"လက်ကျန်ရှိမရှိ ကြည့်ပြီး အိမ်အရောက်ထိ အော်ဒါကို ခြေရာခံပါ။",
+  "ben.4.t":"ပို့ဆောင်မှု ခြေရာခံနိုင်",
+  "ben.3.d":"အော်ဒါတိုင်းအတွက် ဝယ်ယူကြောင်း သက်သေ။",
+  "ben.3.t":"ဒစ်ဂျစ်တယ် ပြေစာ",
+  "ben.2.d":"တင်သွင်းသူများ တိုက်ရိုက်ရောင်းသဖြင့် စိတ်ချရဖို့ ဈေးပိုပေးစရာ မလိုပါ။",
+  "ben.2.t":"သင့်တင့်သော ဈေးနှုန်း",
+  "ben.1.d":"ပစ္စည်းတိုင်း အတည်ပြုထားသော တင်သွင်းသူထံမှ ဖြစ်သည်။",
+  "ben.1.t":"စစ်မှန်သော ပစ္စည်းများ",
+  "nav.why":"အားသာချက်များ","nav.join":"စာရင်းသွင်းရန်",
+  "hero.eyebrow":"အွန်လိုင်း မီးဖိုချောင်သုံးပစ္စည်း ဆိုင် · မြန်မာ",
+  "hero.title":"စစ်မှန်သော ပစ္စည်းများ<br><em>သင့်တင့်သော ဈေးနှုန်း</em>",
+  "hero.lead":"အတည်ပြုထားသော တင်သွင်းသူများကို ဘေးချင်းယှဉ် နှိုင်းယှဉ်ပါ။ ပစ္စည်းရောက်မှ စစ်ဆေးပြီး ကျန်ငွေကို ငွေသားဖြင့် ပေးချေပါ။ လိမ်လည်မှု မရှိ၊ စူပါမားကတ်ဈေး ပိုမပေးရ။",
+  "hero.join":"စာရင်းသွင်းရန်",
+  "perk.1":"<b>အတည်ပြုထားသော</b> တင်သွင်းသူများ","perk.2":"ငွေမပေးမီ <b>စစ်ဆေးနိုင်</b>","perk.3":"<b>ဒစ်ဂျစ်တယ်</b> ပြေစာ",
+  "how.title":"KitchenHub အလုပ်လုပ်ပုံ",
+  "how.1.t":"နှိုင်းယှဉ်ပြီး ရွေးပါ","how.1.d":"တံဆိပ်၊ ဈေးနှုန်းနှင့် အသေးစိတ်များကို ဘေးချင်းယှဉ် ကြည့်ပါ။",
+  "how.2.t":"စရံငွေ အနည်းငယ်ဖြင့် မှာပါ","how.2.d":"ပို့ဆောင်ခ စရံငွေ အနည်းငယ်က အတုအယောင် အော်ဒါများကို ကာကွယ်ပေးသည်။",
+  "how.3.t":"စစ်ဆေးပြီးမှ ပေးချေပါ","how.3.d":"အိမ်ရောက်မှ စစ်ဆေးပြီး ကျန်ငွေကို ငွေသားဖြင့် ပေးပါ။",
+  "why.eyebrow":"ဘာကြောင့် ကျွန်ုပ်တို့ထံ ဝယ်သင့်သလဲ","why.title":"စိတ်ချစွာ ဝယ်ယူပါ",
+  "why.sub":"ဝယ်ယူသူများ ပြောပြခဲ့သော ပြဿနာများနှင့် KitchenHub ၏ ဖြေရှင်းချက်များ",
+  "why.source":"မြန်မာနိုင်ငံ မြို့ပြ အိမ်ထောင်စုများနှင့် ပြုလုပ်ခဲ့သော ဝယ်ယူသူ အင်တာဗျူး ၅ ခုမှ (၂၀၂၆)",
+  "poll.eyebrow":"မေးခွန်းတစ်ခု","poll.q":"မီးဖိုချောင်သုံးပစ္စည်း ဝယ်ရာတွင် သင့်အတွက် အရေးအကြီးဆုံးက ဘာလဲ?",
+  "opt.genuine":"စစ်မှန်သော ပစ္စည်း","opt.price":"သင့်တင့်သော ဈေးနှုန်း","opt.compare":"နှိုင်းယှဉ်ရ လွယ်ကူမှု","opt.delivery":"မြန်ဆန်သော ပို့ဆောင်မှု","opt.receipt":"ပြေစာနှင့် အာမခံ",
+  "poll.thanks":"ကျေးဇူးတင်ပါသည်။ သင့်အဖြေက KitchenHub ကို တည်ဆောက်ရာတွင် ကူညီပေးပါသည်။",
+  "mission.eyebrow":"ကျွန်ုပ်တို့၏ ရည်မှန်းချက်","mission.text":"ရိုးရှင်း၊ ယုံကြည်ရပြီး ဒစ်ဂျစ်တယ်စနစ် အပြည့်ဖြင့် မြန်မာနိုင်ငံရှိ အိမ်တိုင်း အရည်အသွေးကောင်း မီးဖိုချောင်သုံးပစ္စည်းများ ရရှိနိုင်စေရန်။",
+  "vision.eyebrow":"ကျွန်ုပ်တို့၏ မျှော်မှန်းချက်","vision.text":"အိမ်ထောင်စုများမှ စတင်ပြီး လုပ်ငန်းမိတ်ဖက်များဖြင့် တိုးချဲ့ကာ မြန်မာနိုင်ငံ၏ အယုံကြည်ရဆုံး မီးဖိုချောင်သုံးပစ္စည်း ဒစ်ဂျစ်တယ် ပလက်ဖောင်း ဖြစ်လာရန်။",
+  "brands.sub":"ကျွန်ုပ်တို့၏ ဈေးကွက်သုတေသနမှ ဗီယက်နမ်နှင့် မြန်မာနိုင်ငံတွင် လူကြိုက်များသော မီးဖိုချောင်တံဆိပ်များ",
+  "faq.1.a":"ရန်ကုန်တွင် ပုံမှန်အားဖြင့် အလုပ်ရက် ၂–၅ ရက် ကြာပါသည်။ ဖွင့်လှစ်ပြီးနောက် အခြားမြို့များကို ထပ်တိုးပါမည်။",
+  "faq.2.a":"ပစ္စည်းအများစုတွင် ၁ နှစ် အာမခံ ပါဝင်ပြီး အော်ဒါတိုင်းတွင် ဒစ်ဂျစ်တယ် ပြေစာ ပါဝင်ပါသည်။",
+  "faq.4.q":"ဘယ်လို ငွေပေးချေရမလဲ?","faq.4.a":"အော်ဒါအတည်ပြုရန် ပို့ဆောင်ခ စရံငွေ အနည်းငယ် ပေးပါ။ ပစ္စည်းရောက်လာလျှင် စစ်ဆေးပြီး ကျန်ငွေကို ငွေသား သို့မဟုတ် ဘဏ်လွှဲဖြင့် ပေးချေပါ။",
+  "faq.5.q":"KitchenHub ယခု ဖွင့်ထားပြီလား?","faq.5.a":"မဖွင့်ရသေးပါ။ KitchenHub သည် အွန်လိုင်းဆိုင်ဖြစ်ပြီး ဖွင့်လှစ်ရန် ပြင်ဆင်နေပါသည်။ ရန်ကုန်သို့ ဦးစွာ ပို့ဆောင်ပါမည်။ စာရင်းသွင်းထားခြင်း သို့မဟုတ် အော်ဒါ ကြိုတင်မှာထားခြင်း ပြုလုပ်ပါက မှာယူနိုင်သည်နှင့် အကြောင်းကြားပေးပါမည်။",
+  "join.eyebrow":"စောင့်ဆိုင်းစာရင်း","join.title":"ပထမဆုံး မှာယူသူ ဖြစ်ပါစေ",
+  "join.lead":"KitchenHub သည် မကြာမီ ဖွင့်လှစ်မည့် အွန်လိုင်းဆိုင် ဖြစ်ပါသည်။ ရန်ကုန်သို့ ဦးစွာ ပို့ဆောင်ပြီး နောက်ပိုင်း အခြားမြို့များသို့ တိုးချဲ့ပါမည်။ သင့်အချက်အလက် ထားခဲ့ပါက မှာယူနိုင်သည်နှင့် ချက်ချင်း အကြောင်းကြားပေးပါမည်။",
+  "join.p1":"မှာယူနိုင်ချိန်ကို ပထမဆုံး သိရမည်","join.p2":"ယခု ငွေပေးရန် မလိုပါ","join.p3":"ဖွင့်လှစ်မှုအကြောင်းသာ ဆက်သွယ်ပါမည်",
+  "f.name":"အမည်","f.phone":"ဖုန်း၊ Viber သို့မဟုတ် Telegram","f.phone.ph":"09 xxx xxx xxx","f.city":"ပို့ဆောင်ရမည့် မြို့","f.want":"နောက်ထပ် လိုချင်သော ပစ္စည်း (ဖြည့်ရန် မလိုအပ်)",
+  "city.choose":"ဘယ်မြို့ကို ပို့ရမလဲ?","city.Yangon":"ရန်ကုန်","city.Mandalay":"မန္တလေး","city.Naypyidaw":"နေပြည်တော်","city.Other":"အခြား","want.none":"မသေချာသေးပါ",
+  "f.consent":"မှာယူနိုင်ချိန်တွင် KitchenHub က ကျွန်ုပ်ထံ ဆက်သွယ်ရန် သဘောတူပါသည်။",
+  "f.err":"အမည်၊ ဖုန်းနှင့် မြို့ကို ဖြည့်ပြီး အကွက်ကို အမှန်ခြစ် ပေးပါ။",
+  "join.btn":"စာရင်းသွင်းရန်","join.ok.t":"စာရင်းထဲ ပါဝင်ပြီးပါပြီ!","join.ok.d":"ကျေးဇူးတင်ပါသည်။ သင့်မြို့သို့ ပို့ဆောင်၍ အွန်လိုင်းမှ မှာယူနိုင်သည်နှင့် အကြောင်းကြားပေးပါမည်။",
+  "d.checkout":"အော်ဒါ ကြိုတင်မှာရန်",
+  "co.intro":"ယခု ငွေလက်မခံသေးပါ။ ဤအော်ဒါကို ကြိုတင်မှာထားပါက အွန်လိုင်းမှ မှာယူနိုင်သည်နှင့် အတည်ပြုရန် ဖုန်းဆက်ပါမည်။",
+  "co.place":"ကြိုတင်မှာယူရန်",
+  "co.note":"ယခု ငွေမပေးရပါ။ ဖွင့်ချိန်တွင် စရံငွေ အနည်းငယ်ပေး၍ ပစ္စည်းရောက်မှ စစ်ဆေးပြီး ကျန်ငွေကို ငွေသားဖြင့် ပေးချေရပါမည်။",
+  "done.title":"ကြိုတင်မှာယူမှု လက်ခံရရှိပါပြီ","done.text":"ကျေးဇူးတင်ပါသည်။ အတည်ပြုရန် ဖုန်းဆက်ပါမည်။ သင့်ရည်ညွှန်းနံပါတ်မှာ",
+  "footer.tag":"စမတ်ပစ္စည်းများ။ သင့်တင့်သော ဈေးနှုန်း။ ရိုးရှင်းသော ပို့ဆောင်မှု။ အိမ်တိုင်းအတွက်။",
+  "footer.copy":"© ၂၀၂၆ KitchenHub Myanmar",
+  "footer.privacy":"ဝင်ရောက်ကြည့်ရှုမှုနှင့် ခြင်းထဲထည့်မှုများကို အမည်မဖော်ဘဲ ရေတွက်ပါသည်။ စာရင်းသွင်းခြင်း သို့မဟုတ် ကြိုတင်မှာယူခြင်း ပြုလုပ်မှသာ သင့်အမည်နှင့် ဖုန်းကို သိမ်းဆည်းပြီး ဖွင့်လှစ်မှုအကြောင်း ဆက်သွယ်ရန်သာ အသုံးပြုပါသည်။"
+});
+
 /* Burmese product text (English is in products.js) */
 var PRODUCT_MY = {
   "air-fryer":{name:"အဲယားဖရိုင်ယာ",desc:"ဆီအနည်းငယ်ဖြင့် ကြွပ်ရွစွာ ကြော်နိုင်",
@@ -142,7 +249,7 @@ var LANG = "en";
 try { LANG = localStorage.getItem("kitchenHavenLang") || ((navigator.language||"").indexOf("my")===0 ? "my" : "en"); } catch (e) {}
 if (!TEXT[LANG]) LANG = "en";
 function t(key, vars){
-  var s = (TEXT[LANG][key] !== undefined ? TEXT[LANG][key] : TEXT.en[key]) || key;
+  var s = TEXT[LANG][key] !== undefined ? TEXT[LANG][key] : (TEXT.en[key] !== undefined ? TEXT.en[key] : key);
   if (vars) Object.keys(vars).forEach(function(k){ s = s.split("{"+k+"}").join(vars[k]); });
   return s;
 }

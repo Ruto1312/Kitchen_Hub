@@ -16,7 +16,7 @@ var HEADERS = ["Time", "Event", "Category", "Brand", "Product", "Price ($)",
 var ALLOWED = ["page_view", "view_brands", "view_details", "add_to_cart",
                "order_placed", "switch_language", "switch_currency", "feedback"];
 var SIGNUP_HEADERS = ["Time", "Type", "Name", "Phone / Viber / Telegram", "City",
-                      "Wants next", "Reserved items", "Total ($)", "Language", "Visitor ID"];
+                      "Wants next", "Reserved items", "Total ($)", "Language", "Visitor ID", "Email", "Age", "Address"];
 
 /* Receives one event from the website and adds it as a row */
 function doPost(e) {
@@ -45,11 +45,19 @@ function saveSignup(d) {
   if (d.consent !== true || ["waitlist", "reservation"].indexOf(d.type) < 0) return ContentService.createTextOutput("ignored");
   var ss = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = ss.getSheetByName("Sign-ups") || makeSignupSheet(ss);
+  // Older sheets only have columns A-J: add the new headers once
+  if (sheet.getRange(1, 11).getValue() !== "Email") {
+    sheet.getRange(1, 11, 1, 3).setValues([["Email", "Age", "Address"]])
+      .setFontWeight("bold").setBackground("#C8643B").setFontColor("#ffffff");
+    sheet.setColumnWidth(11, 220); sheet.setColumnWidth(13, 300);
+  }
   sheet.appendRow([
     new Date(), d.type, clean(d.name), clean(d.phone), clean(d.city), clean(d.want), clean(d.items),
-    typeof d.total === "number" ? d.total : "", clean(d.lang), clean(d.visitor)
+    typeof d.total === "number" ? d.total : "", clean(d.lang), clean(d.visitor),
+    clean(d.email), clean(d.age), clean(d.address)
   ]);
   return ContentService.createTextOutput("ok");
+}
 }
 function makeSignupSheet(ss) {
   var sh = ss.insertSheet("Sign-ups");

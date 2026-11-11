@@ -11,7 +11,7 @@ function el(id){ return document.getElementById(id); }
 /* Send a sign-up (waitlist or reservation) to the Google Sheet */
 function sendSignup(data){
   var row = {
-    event: "signup", type: data.type, name: data.name, phone: data.phone, city: data.city,
+    event: "signup", type: data.type, name: data.name, phone: data.phone, email: data.email || "", age: data.age || "", address: data.address || "", city: data.city,
     want: data.want || "", items: data.items || "", total: (typeof data.total === "number") ? data.total : "",
     consent: true, lang: (typeof LANG !== "undefined") ? LANG : "", visitor: KH_VISITOR
   };
@@ -24,14 +24,31 @@ function sendSignup(data){
   if (GA_MEASUREMENT_ID && window.gtag) gtag("event", "generate_lead", { lead_source: data.type, currency: "USD", value: row.total || 0 });
 }
 
-/* Read and check a form: name, phone, city and consent are required */
+/* Read and check a form: name, phone, city and consent are required.
+   Email, age and address are checked only if the form has them (the waitlist form). */
 function readForm(form){
   var f = form.elements, ok = true;
   var data = { name: f.name.value.trim(), phone: f.phone.value.trim(), city: f.city.value, want: f.want ? f.want.value : "" };
+  if (f.email)   data.email   = f.email.value.trim();
+  if (f.age)     data.age     = f.age.value.trim();
+  if (f.address) data.address = f.address.value.trim();
   [f.name, f.phone, f.city].forEach(function(input){
     var bad = !input.value.trim() || (input === f.phone && input.value.replace(/[^0-9]/g, "").length < 6);
     input.classList.toggle("invalid", bad); if (bad) ok = false;
   });
+  if (f.email) {
+    var badEmail = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.value.trim());
+    f.email.classList.toggle("invalid", badEmail); if (badEmail) ok = false;
+  }
+  if (f.age) {
+    var a = parseInt(f.age.value, 10);
+    var badAge = isNaN(a) || a < 16 || a > 99;
+    f.age.classList.toggle("invalid", badAge); if (badAge) ok = false;
+  }
+  if (f.address) {
+    var badAddr = f.address.value.trim().length < 5;
+    f.address.classList.toggle("invalid", badAddr); if (badAddr) ok = false;
+  }
   f.consent.parentNode.classList.toggle("invalid", !f.consent.checked);
   if (!f.consent.checked) ok = false;
   form.querySelector(".form-err").hidden = ok;

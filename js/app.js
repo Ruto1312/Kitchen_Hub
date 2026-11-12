@@ -214,7 +214,6 @@ function renderAll(){
   applyStaticText();
   $("hero-stat").innerHTML=t("hero.stat",{c:num(baseProducts.length),b:num(Object.keys(brandPrices).length)});
   [].forEach.call(document.querySelectorAll("[data-cur]"),function(b){b.setAttribute("aria-pressed",b.getAttribute("data-cur")===CUR?"true":"false")});
-  $("rate-note").textContent=t("rate.note",{rate:num(EXCHANGE_RATE.toLocaleString("en-US"))});
   renderChips();
   var reopen=renderProducts();
   if(reopen){var c=$("category-grid").querySelector('[data-category="'+reopen+'"]'); if(c) openPanel(c,true);}

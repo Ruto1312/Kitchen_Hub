@@ -178,7 +178,7 @@ Object.assign(TEXT.en, {
   "co.intro":"We’re not taking payments yet. Reserve this order and we’ll call you to confirm as soon as online ordering opens.",
   "co.place":"Reserve order",
   "co.note":"No payment now. At launch: a small deposit, inspect at delivery, pay the rest in cash.",
-  "done.title":"Reservation received","done.text":"Thank you! We’ll call you to confirm. Your reference number is",
+  "done.title":"Reservation received","done.text":"Thank you! Our team will contact you by phone or Viber to confirm your reservation.",
   "footer.tag":"Smart appliances. Fair price. Simple delivery. Every home.",
   "footer.copy":"© 2026 KitchenHub Myanmar",
   "footer.privacy":"We count visits and cart clicks anonymously. We only save your name and phone if you join the waitlist or reserve an order, and only use them to contact you about the launch."
@@ -246,7 +246,7 @@ Object.assign(TEXT.my, {
   "co.intro":"ယခု ငွေလက်မခံသေးပါ။ ဤအော်ဒါကို ကြိုတင်မှာထားပါက အွန်လိုင်းမှ မှာယူနိုင်သည်နှင့် အတည်ပြုရန် ဖုန်းဆက်ပါမည်။",
   "co.place":"ကြိုတင်မှာယူရန်",
   "co.note":"ယခု ငွေမပေးရပါ။ ဖွင့်ချိန်တွင် စရံငွေ အနည်းငယ်ပေး၍ ပစ္စည်းရောက်မှ စစ်ဆေးပြီး ကျန်ငွေကို ငွေသားဖြင့် ပေးချေရပါမည်။",
-  "done.title":"ကြိုတင်မှာယူမှု လက်ခံရရှိပါပြီ","done.text":"ကျေးဇူးတင်ပါသည်။ အတည်ပြုရန် ဖုန်းဆက်ပါမည်။ သင့်ရည်ညွှန်းနံပါတ်မှာ",
+  "done.title":"ကြိုတင်မှာယူမှု လက်ခံရရှိပါပြီ","done.text":"ကျေးဇူးတင်ပါသည်။ ကြိုတင်မှာယူမှုကို အတည်ပြုရန် ကျွန်ုပ်တို့အဖွဲ့က ဖုန်း သို့မဟုတ် Viber ဖြင့် ဆက်သွယ်ပါမည်။",
   "footer.tag":"စမတ်ပစ္စည်းများ။ သင့်တင့်သော ဈေးနှုန်း။ ရိုးရှင်းသော ပို့ဆောင်မှု။ အိမ်တိုင်းအတွက်။",
   "footer.copy":"© ၂၀၂၆ KitchenHub Myanmar",
   "footer.privacy":"ဝင်ရောက်ကြည့်ရှုမှုနှင့် ခြင်းထဲထည့်မှုများကို အမည်မဖော်ဘဲ ရေတွက်ပါသည်။ စာရင်းသွင်းခြင်း သို့မဟုတ် ကြိုတင်မှာယူခြင်း ပြုလုပ်မှသာ သင့်အမည်နှင့် ဖုန်းကို သိမ်းဆည်းပြီး ဖွင့်လှစ်မှုအကြောင်း ဆက်သွယ်ရန်သာ အသုံးပြုပါသည်။"

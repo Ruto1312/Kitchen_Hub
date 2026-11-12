@@ -242,10 +242,11 @@
       <p class="note" data-i="co.note"></p>
     </form>
   </div>
-  <div id="vDone" class="dbody" style="display:none;text-align:center">
+  <div id="vDone" class="dbody" style="display:none;flex-direction:column;align-items:center;text-align:center">
     <div class="done-check" aria-hidden="true">✓</div>
     <h2 data-i="done.title"></h2>
-    <p><span data-i="done.text"></span> <b id="ordno"></b>.</p>
+    <p data-i="done.text"></p>
+    <b id="ordno" hidden></b>
     <button class="btn full" id="keep" data-i="done.keep"></button>
   </div>
 </aside>

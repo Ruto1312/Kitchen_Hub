@@ -423,3 +423,14 @@ body.lang-my .cmp-col li{line-height:1.8}
 /* Mission / vision text contrast */
 .about .mcard.light .mbig{color:var(--ink)}
 .about .mcard.dark .mbig{color:#FAF7F2}
+
+/* ----- Waitlist: age group buttons (optional) ----- */
+.ages{border:0;margin:0;padding:0;min-width:0}
+.ages legend{padding:0;margin-bottom:.45rem;font-weight:600;font-size:.9rem}
+.age-opts{display:flex;flex-wrap:wrap;gap:.5rem}
+.age-opts label{position:relative;cursor:pointer;margin:0}
+.age-opts input{position:absolute;opacity:0;width:1px;height:1px}
+.age-opts span{display:inline-block;padding:.5rem 1rem;border:1.5px solid var(--line);border-radius:999px;background:var(--card);font-weight:600;font-size:.9rem;transition:all .15s}
+.age-opts label:hover span{border-color:var(--brand)}
+.age-opts input:checked+span{background:var(--brand);border-color:var(--brand);color:#fff}
+.age-opts input:focus-visible+span{outline:2px solid var(--brand);outline-offset:2px}

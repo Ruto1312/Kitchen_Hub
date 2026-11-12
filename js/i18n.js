@@ -168,10 +168,11 @@ Object.assign(TEXT.en, {
   "join.eyebrow":"Join the waitlist","join.title":"Be the first to order",
   "join.lead":"KitchenHub is an online store, launching soon. We’ll deliver in Yangon first, then more cities. Leave your details and we’ll message you as soon as you can order.",
   "join.p1":"Be first to know when ordering opens","join.p2":"No payment needed now","join.p3":"We only message you about the launch",
-  "f.name":"Your name","f.phone":"Phone, Viber or Telegram","f.phone.ph":"09 xxx xxx xxx","f.city":"Delivery city","f.want":"Appliance you need next (optional)","f.email":"Email","f.email.ph":"name@example.com","f.age":"Age","f.address":"Delivery address","f.address.ph":"House no., street, township",
+  "f.name":"Your name","f.phone":"Phone, Viber or Telegram","f.phone.ph":"09 xxx xxx xxx","f.city":"Delivery city","f.want":"Appliance you need next (optional)",
+  "f.age":"Your age group (optional)",
   "city.choose":"Where should we deliver?","city.Yangon":"Yangon","city.Mandalay":"Mandalay","city.Naypyidaw":"Naypyidaw","city.Other":"Other","want.none":"Not sure yet",
   "f.consent":"I agree that KitchenHub may message me when ordering opens.",
-  "f.err":"Please fill in all the fields correctly and tick the box.",
+  "f.err":"Please fill in your name, phone and city, and tick the box.",
   "join.btn":"Join the waitlist","join.ok.t":"You’re on the list!","join.ok.d":"Thank you. We’ll message you as soon as you can order online with delivery to your city.",
   "d.checkout":"Reserve order",
   "co.intro":"We’re not taking payments yet. Reserve this order and we’ll call you to confirm as soon as online ordering opens.",
@@ -180,7 +181,7 @@ Object.assign(TEXT.en, {
   "done.title":"Reservation received","done.text":"Thank you! We’ll call you to confirm. Your reference number is",
   "footer.tag":"Smart appliances. Fair price. Simple delivery. Every home.",
   "footer.copy":"© 2026 KitchenHub Myanmar",
-  "footer.privacy":"We count visits and cart clicks anonymously. If you join the waitlist or reserve an order, we save the details you give us (name, phone, and for the waitlist also email, age and address) and only use them to contact you about the launch."
+  "footer.privacy":"We count visits and cart clicks anonymously. We only save your name and phone if you join the waitlist or reserve an order, and only use them to contact you about the launch."
 });
 Object.assign(TEXT.my, {
   "ben.4.d":"လက်ကျန်ရှိမရှိ ကြည့်ပြီး အိမ်အရောက်ထိ အော်ဒါကို ခြေရာခံပါ။",
@@ -235,10 +236,11 @@ Object.assign(TEXT.my, {
   "join.eyebrow":"စောင့်ဆိုင်းစာရင်း","join.title":"ပထမဆုံး မှာယူသူ ဖြစ်ပါစေ",
   "join.lead":"KitchenHub သည် မကြာမီ ဖွင့်လှစ်မည့် အွန်လိုင်းဆိုင် ဖြစ်ပါသည်။ ရန်ကုန်သို့ ဦးစွာ ပို့ဆောင်ပြီး နောက်ပိုင်း အခြားမြို့များသို့ တိုးချဲ့ပါမည်။ သင့်အချက်အလက် ထားခဲ့ပါက မှာယူနိုင်သည်နှင့် ချက်ချင်း အကြောင်းကြားပေးပါမည်။",
   "join.p1":"မှာယူနိုင်ချိန်ကို ပထမဆုံး သိရမည်","join.p2":"ယခု ငွေပေးရန် မလိုပါ","join.p3":"ဖွင့်လှစ်မှုအကြောင်းသာ ဆက်သွယ်ပါမည်",
-  "f.name":"အမည်","f.phone":"ဖုန်း၊ Viber သို့မဟုတ် Telegram","f.phone.ph":"09 xxx xxx xxx","f.city":"ပို့ဆောင်ရမည့် မြို့","f.want":"နောက်ထပ် လိုချင်သော ပစ္စည်း (ဖြည့်ရန် မလိုအပ်)","f.email":"အီးမေးလ်","f.email.ph":"name@example.com","f.age":"အသက်","f.address":"ပို့ဆောင်ရမည့် လိပ်စာ","f.address.ph":"အိမ်အမှတ်၊ လမ်း၊ မြို့နယ်",
+  "f.name":"အမည်","f.phone":"ဖုန်း၊ Viber သို့မဟုတ် Telegram","f.phone.ph":"09 xxx xxx xxx","f.city":"ပို့ဆောင်ရမည့် မြို့","f.want":"နောက်ထပ် လိုချင်သော ပစ္စည်း (ဖြည့်ရန် မလိုအပ်)",
+  "f.age":"သင့်အသက်အုပ်စု (ဖြည့်ရန် မလိုအပ်)",
   "city.choose":"ဘယ်မြို့ကို ပို့ရမလဲ?","city.Yangon":"ရန်ကုန်","city.Mandalay":"မန္တလေး","city.Naypyidaw":"နေပြည်တော်","city.Other":"အခြား","want.none":"မသေချာသေးပါ",
   "f.consent":"မှာယူနိုင်ချိန်တွင် KitchenHub က ကျွန်ုပ်ထံ ဆက်သွယ်ရန် သဘောတူပါသည်။",
-  "f.err":"အချက်အလက်အားလုံးကို မှန်ကန်စွာ ဖြည့်ပြီး အကွက်ကို အမှန်ခြစ် ပေးပါ။",
+  "f.err":"အမည်၊ ဖုန်းနှင့် မြို့ကို ဖြည့်ပြီး အကွက်ကို အမှန်ခြစ် ပေးပါ။",
   "join.btn":"စာရင်းသွင်းရန်","join.ok.t":"စာရင်းထဲ ပါဝင်ပြီးပါပြီ!","join.ok.d":"ကျေးဇူးတင်ပါသည်။ သင့်မြို့သို့ ပို့ဆောင်၍ အွန်လိုင်းမှ မှာယူနိုင်သည်နှင့် အကြောင်းကြားပေးပါမည်။",
   "d.checkout":"အော်ဒါ ကြိုတင်မှာရန်",
   "co.intro":"ယခု ငွေလက်မခံသေးပါ။ ဤအော်ဒါကို ကြိုတင်မှာထားပါက အွန်လိုင်းမှ မှာယူနိုင်သည်နှင့် အတည်ပြုရန် ဖုန်းဆက်ပါမည်။",
@@ -247,7 +249,7 @@ Object.assign(TEXT.my, {
   "done.title":"ကြိုတင်မှာယူမှု လက်ခံရရှိပါပြီ","done.text":"ကျေးဇူးတင်ပါသည်။ အတည်ပြုရန် ဖုန်းဆက်ပါမည်။ သင့်ရည်ညွှန်းနံပါတ်မှာ",
   "footer.tag":"စမတ်ပစ္စည်းများ။ သင့်တင့်သော ဈေးနှုန်း။ ရိုးရှင်းသော ပို့ဆောင်မှု။ အိမ်တိုင်းအတွက်။",
   "footer.copy":"© ၂၀၂၆ KitchenHub Myanmar",
-  "footer.privacy":"ဝင်ရောက်ကြည့်ရှုမှုနှင့် ခြင်းထဲထည့်မှုများကို အမည်မဖော်ဘဲ ရေတွက်ပါသည်။ စာရင်းသွင်းခြင်း သို့မဟုတ် ကြိုတင်မှာယူခြင်း ပြုလုပ်ပါက သင်ပေးသော အချက်အလက်များ (အမည်၊ ဖုန်း၊ စာရင်းသွင်းလျှင် အီးမေးလ်၊ အသက်နှင့် လိပ်စာပါ) ကို သိမ်းဆည်းပြီး ဖွင့်လှစ်မှုအကြောင်း ဆက်သွယ်ရန်သာ အသုံးပြုပါသည်။"
+  "footer.privacy":"ဝင်ရောက်ကြည့်ရှုမှုနှင့် ခြင်းထဲထည့်မှုများကို အမည်မဖော်ဘဲ ရေတွက်ပါသည်။ စာရင်းသွင်းခြင်း သို့မဟုတ် ကြိုတင်မှာယူခြင်း ပြုလုပ်မှသာ သင့်အမည်နှင့် ဖုန်းကို သိမ်းဆည်းပြီး ဖွင့်လှစ်မှုအကြောင်း ဆက်သွယ်ရန်သာ အသုံးပြုပါသည်။"
 });
 
 /* Burmese product text (English is in products.js) */

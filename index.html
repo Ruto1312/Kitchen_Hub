@@ -114,7 +114,7 @@
   <section id="products">
     <div class="wrap">
       <div class="shop-head">
-        <div><p class="eyebrow" data-i="shop.eyebrow"></p><h2 data-i="shop.title"></h2><p class="rate-note" id="rate-note"></p></div>
+        <div><p class="eyebrow" data-i="shop.eyebrow"></p><h2 data-i="shop.title"></h2></div>
         <label class="search"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input id="q" type="search" data-i-ph="search.ph" data-i-aria="search.ph"></label>
       </div>
       <div class="chips" id="chips" data-i-aria="chips.aria"></div>
@@ -183,20 +183,27 @@
         <ul class="join-points"><li data-i="join.p1"></li><li data-i="join.p2"></li><li data-i="join.p3"></li></ul>
       </div>
       <form id="wl" class="join-form" novalidate>
-  <label><span data-i="f.name"></span><input name="name" required maxlength="80" autocomplete="name"></label>
-  <label><span data-i="f.phone"></span><input name="phone" required maxlength="40" type="tel" autocomplete="tel" data-i-ph="f.phone.ph"></label>
-  <label><span data-i="f.email"></span><input name="email" required maxlength="120" type="email" autocomplete="email" data-i-ph="f.email.ph"></label>
-  <div class="two">
-    <label><span data-i="f.age"></span><input name="age" required type="number" inputmode="numeric" min="16" max="99"></label>
-    <label><span data-i="f.city"></span><select name="city" required class="city-select"></select></label>
-  </div>
-  <label><span data-i="f.address"></span><input name="address" required maxlength="200" autocomplete="street-address" data-i-ph="f.address.ph"></label>
-  <label><span data-i="f.want"></span><select name="want" class="want-select"></select></label>
-  <label class="consent"><input type="checkbox" name="consent" required><span data-i="f.consent"></span></label>
-  <button class="btn full" type="submit" data-i="join.btn"></button>
-  <p class="form-err" role="alert" hidden data-i="f.err"></p>
-  <div class="join-ok" role="status" hidden><span class="done-check" aria-hidden="true">✓</span><div><b data-i="join.ok.t"></b><p data-i="join.ok.d"></p></div></div>
-</form>
+        <label><span data-i="f.name"></span><input name="name" required maxlength="80" autocomplete="name"></label>
+        <label><span data-i="f.phone"></span><input name="phone" required maxlength="40" type="tel" autocomplete="tel" data-i-ph="f.phone.ph"></label>
+        <div class="two">
+          <label><span data-i="f.city"></span><select name="city" required class="city-select"></select></label>
+          <label><span data-i="f.want"></span><select name="want" class="want-select"></select></label>
+        </div>
+        <fieldset class="ages">
+          <legend data-i="f.age"></legend>
+          <div class="age-opts">
+            <label><input type="radio" name="age" value="18-24"><span>18–24</span></label>
+            <label><input type="radio" name="age" value="25-34"><span>25–34</span></label>
+            <label><input type="radio" name="age" value="35-44"><span>35–44</span></label>
+            <label><input type="radio" name="age" value="45-54"><span>45–54</span></label>
+            <label><input type="radio" name="age" value="55+"><span>55+</span></label>
+          </div>
+        </fieldset>
+        <label class="consent"><input type="checkbox" name="consent" required><span data-i="f.consent"></span></label>
+        <button class="btn full" type="submit" data-i="join.btn"></button>
+        <p class="form-err" role="alert" hidden data-i="f.err"></p>
+        <div class="join-ok" role="status" hidden><span class="done-check" aria-hidden="true">✓</span><div><b data-i="join.ok.t"></b><p data-i="join.ok.d"></p></div></div>
+      </form>
     </div>
   </section>
 </main>
